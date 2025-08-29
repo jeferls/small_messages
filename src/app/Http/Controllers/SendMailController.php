@@ -20,6 +20,6 @@ class SendMailController extends Controller
 
         Mail::to($data['to_address'])->send(new HtmlMail($data['body_email'], $data['title']));
 
-        return response()->json(['message' => 'Email sent successfully']);
+        return response()->json(['message' => 'Email sent successfully'], 200);
     }
 }
